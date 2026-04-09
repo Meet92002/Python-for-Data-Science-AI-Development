@@ -1,0 +1,93 @@
+# Dictionaries
+# What are Dictionaries?
+# Keys
+# Quiz on Dictionaries
+# Scenario
+
+
+# Dictionaries///////////////////////////
+
+# Create the dictionary
+
+# Keys are key1, key2, key3, key4, key5, (0,1).
+# Values are {1,2,[3,3,3],(4,4,4),5,6} corresponding to the keys
+
+Dict = {"key1": 1, "key2": "2", "key3": [3, 3, 3], "key4": (4, 4, 4), ('key5'): 5, (0, 1): 6}
+Dict 
+# output - {'key1': 1, 'key2': '2', 'key3': [3, 3, 3], 'key4': (4, 4, 4), 'key5': 5, (0, 1): 6}
+
+# Access to the value by the key
+
+Dict["key1"] # output - 1
+
+# Access to the value by the key
+
+Dict[(0, 1)] # output - 6   
+
+# Create a sample dictionary
+
+release_year_dict = {"Thriller": "1982", "Back in Black": "1980", \
+                    "The Dark Side of the Moon": "1973", "The Bodyguard": "1992", \
+                    "Bat Out of Hell": "1977", "Their Greatest Hits (1971-1975)": "1976", \
+                    "Saturday Night Fever": "1977", "Rumours": "1977"}
+release_year_dict
+# output - {'Thriller': '1982', 'Back in Black': '1980',
+#           'The Dark Side of the Moon': '1973','The Bodyguard': '1992', 
+#           'Bat Out of Hell': '1977', 'Their Greatest Hits (1971-1975)': '1976',
+#           'Saturday Night Fever': '1977', 'Rumours': '1977'}
+
+# Keys////////////////////////////
+
+# Get value by keys
+
+release_year_dict['Thriller']  # output - '1982'
+
+# Get value by key
+
+release_year_dict['The Bodyguard'] # output - '1992'
+
+# Get all the keys in dictionary
+
+release_year_dict.keys()
+ # output - dict_keys(['Thriller', 'Back in Black', 
+ #                     'The Dark Side of the Moon',
+ #                     'The Bodyguard', 'Bat Out of Hell',
+ #                     'Their Greatest Hits (1971-1975)',
+ #                     'Saturday Night Fever', 'Rumours'])
+
+ # Get all the values in dictionary
+
+release_year_dict.values() # output - dict_values(['1982', '1980', '1973', 
+#                                                  '1992', '1977', '1976', 
+#                                                  '1977', '1977'])
+
+
+# Append value with key into dictionary
+
+release_year_dict['Graduation'] = '2007'
+release_year_dict 
+# output - {'Thriller': '1982',
+#           'Back in Black': '1980',
+#           'The Dark Side of the Moon': '1973',
+#           'The Bodyguard': '1992',
+#           'Bat Out of Hell': '1977',
+#           'Their Greatest Hits (1971-1975)': '1976',
+#           'Saturday Night Fever': '1977',
+#           'Rumours': '1977',
+#           'Graduation': '2007'}
+
+# Delete entries by key
+
+del(release_year_dict['Thriller'])
+del(release_year_dict['Graduation'])
+release_year_dict # output - {'Back in Black': '1980',
+#                             'The Dark Side of the Moon': '1973',
+#                             'The Bodyguard': '1992',
+#                             'Bat Out of Hell': '1977',
+#                             'Their Greatest Hits (1971-1975)': '1976',
+#                             'Saturday Night Fever': '1977',
+#                             'Rumours': '1977'}
+
+# Verify the key is in the dictionary
+
+'The Bodyguard' in release_year_dict # output - True
