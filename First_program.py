@@ -5,7 +5,6 @@
 # Writing comments in Python
 # Errors in Python
 # Does Python know about your error before it runs your code?
-# Exercise: Your First Program
 
 # 1. Say 'Hello' to the world in Python
 print('Hello, Python!')

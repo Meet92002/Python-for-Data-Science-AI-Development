@@ -2,7 +2,6 @@
 # Expressions
 # Exercise: Expressions
 # Variables
-# Exercise: Expression and Variables in Python
 
 # Addition operation expression
 
@@ -59,7 +58,7 @@ total_min = 43 + 42 + 57
 total_hours = total_min / 60 # Total length of albums in hours 
 total_hours    #output - 2.3666666666666667
 
-# ComplicateD expression
+# Complicated expression
 
 total_hours = (43 + 42 + 57) / 60  # Total hours in a single expression
 total_hours    #output - 2.3666666666666667

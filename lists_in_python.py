@@ -4,8 +4,6 @@
 # List Content
 # List Operations
 # Copy and Clone List
-# Quiz on Lists
-# Scenario:Shopping List
 
 
 # The table has one row for each movie and several columns:

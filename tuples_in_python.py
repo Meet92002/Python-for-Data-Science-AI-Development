@@ -3,7 +3,7 @@
 # Indexing
 # Slicing
 # Sorting
-# Quiz on Tuples
+
 
 '''
 The table has one row for each movie and several columns:

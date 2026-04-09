@@ -6,7 +6,6 @@
 # Concatenate Strings
 # Escape Sequences
 # String Manipulation Operations
-# Quiz on Strings
 
 # Use quotation marks for defining string
 

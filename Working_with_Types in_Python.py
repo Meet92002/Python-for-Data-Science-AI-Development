@@ -4,7 +4,6 @@
 # Floats
 # Converting from one object type to a different object type
 # Boolean data type
-# Exercise: Types
 
 
 # Integer
