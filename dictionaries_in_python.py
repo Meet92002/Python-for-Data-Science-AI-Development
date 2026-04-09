@@ -1,8 +1,8 @@
 # Dictionaries
 # What are Dictionaries?
 # Keys
-# Quiz on Dictionaries
-# Scenario
+# Values
+# Verify the key is in the dictionary
 
 
 # Dictionaries///////////////////////////
