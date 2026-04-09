@@ -2,6 +2,7 @@
 # Comparison Operators
 # Branching
 # Logical operators
+# Quiz on Conditions
 
 # Condition Statements ///////////////////////////////////
 
@@ -164,3 +165,50 @@ album_year = 1983
 if not (album_year == 1984):
     print ("Album year is not 1984")
 #output - Album year is not 1984
+
+# Quiz on Conditions//////////////////////////////////////////
+
+""" Player Name	Sport	Achievements
+Serena Williams	Tennis	23 Grand Slams
+Lionel Messi	Soccer	7 Ballon d'Ors
+Michael Phelps	Swimming	23 Gold Medals
+Usain Bolt	Athletics	8 Gold Medals
+Roger Federer	Tennis	20 Grand Slams
+Cristiano Ronaldo	Soccer	5 Ballon d'Ors """
+
+
+
+# Write your code below and press Shift+Enter to execute
+player_name = "Lionel Messi"
+sport = "Soccer"
+achievements = 11
+if achievements > 10:
+    print("Lionel Messi, Soccer, and 7 Ballon d'Ors")
+    print(f"{player_name} plays {sport} and has {achievements} achievements.")
+else:
+    print("does not have more than 10 achievements.")
+#output - Lionel Messi, Soccer, and 7 Ballon d'Ors
+#         Lionel Messi plays Soccer and has 11 achievements.
+
+# Write your code below and press Shift+Enter to execute
+user_name = "Roger Federer"
+sports = "Tennis"
+achievements = 20
+
+if sports == 'Tennis' or achievements == 20:
+    print("Achieved successful")
+#output - Achieved successful
+
+
+# Write your code below and press Shift+Enter to execute
+user_name = "Usain Bolt"
+sports = "Athletics"
+achievements = 8
+
+if achievements < 10 and sports != "soccer":
+    print(f" The player name is {user_name}, he played {sports} sport game and his achievements was {achievements} gold medals")
+else:
+    print(" That data not match with their criteria")
+
+#output -  The player name is Usain Bolt, 
+#           he played Athletics sport game and his achievements was 8 gold medals
