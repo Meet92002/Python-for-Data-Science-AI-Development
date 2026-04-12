@@ -10,6 +10,8 @@
 
 # Import the library
 
+from typing import Dict
+
 import matplotlib.pyplot as plt
 # %matplotlib inline # This line is used in Jupyter notebooks to display plots inline
 
@@ -166,3 +168,126 @@ vehicle2.display_properties()
 # Maximum Speed: 180
 # Mileage: 25
 # Seating Capacity: 4
+
+# Add exercises ////////////////////////////////////////
+
+# 1. Inside the constructor, convert the text argument to lowercase using the lower() method.
+# 2.Then, remove punctuation marks (periods, exclamation marks, commas, and question marks) from the text using the replace() method.
+# 3. Finally, assign the formatted text to a new attribute called fmtText.
+class TextAnalyzer(object):
+    
+    givenstring="Lorem ipsum dolor! diam amet, consetetur Lorem magna. sed diam nonumy eirmod tempor. diam et labore? et diam magna. et diam amet."
+    text = givenstring
+    
+    def __init__ (self, text):
+        # remove punctuation
+        self.fmtText = formattedText
+        formattedText = text.replace('.','').replace('!','').replace('?','').replace(',','')
+        formattedText = formattedText.lower()
+        self.fmtText = formattedText
+        print(self.fmtText)
+    #output: lorem ipsum dolor diam amet consetetur lorem magna sed diam nonumy eirmod tempor diam et labore et diam magna et diam amet
+
+# 1. Inside the constructor, convert the text argument to lowercase using the lower() method.
+# 2. Then, remove punctuation marks (periods, exclamation marks, commas, and question marks) from the text using the replace() method.
+# 3. Finally, assign the formatted text to a new attribute called fmtText.
+
+class TextAnalyzer(object):
+    
+    def __init__ (self, text):
+        # remove punctuation
+        formattedText = text.replace('.','').replace('!','').replace('?','').replace(',','')
+        
+        # make text lowercase
+        formattedText = formattedText.lower()
+        
+        self.fmtText = formattedText
+        
+    def freqAll(self):        
+        # split text into words
+        wordList = self.fmtText.split(' ')
+        
+        # Create dictionary
+        freqMap = {}
+        for word in set(wordList): # use set to remove duplicates in list
+            freqMap[word] = wordList.count(word)
+        
+        return freqMap
+    #output: {'lorem': 2, 'ipsum': 1, 'dolor': 1, 'diam': 5, 'amet': 3, 
+    # 'consetetur': 1, 'magna': 2, 'sed': 1, 'nonumy': 1, 'eirmod': 1, 
+    # 'tempor': 1, 'et': 4, 'labore': 1}
+    
+# In this step, you will implement the freqAll() method with the below parameters:
+#  1. Split the fmtText attribute into individual words using the split() method.
+#  2.Create an empty dictionary to store the word frequency.
+#  3. Iterate over the list of words and update the frequency dictionary accordingly.
+#  4. Use count method for counting the occurence.
+#  5. Return the frequency dictionary.
+
+class TextAnalyzer(object):
+    
+    givenstring="Lorem ipsum dolor! diam amet, consetetur Lorem magna. sed diam nonumy eirmod tempor. diam et labore? et diam magna. et diam amet."
+    text = givenstring
+    
+    def __init__ (self, text):
+        # remove punctuation
+        self.text = formattedText
+        formattedText = text.replace('.','').replace('!','').replace('?','').replace(',','')
+        formattedText = formattedText.lower()
+        self.fmtText = formattedText
+        print(self.fmtText)
+    def freqAll(self):
+        splitlist = self.fmtText.split()
+        Dirct={ }
+        for key in splitlist:
+            Dict[key] = splitlist.count(key)
+        return Dict
+    # Output:
+    # lorem ipsum dolor diam amet consetetur lorem magna sed diam nonumy eirmod tempor diam et labore et diam magna et diam amet
+    # {'lorem': 2, 'ipsum': 1, 'dolor': 1, 'diam': 5, 'amet': 3, 
+    # 'consetetur': 1, 'magna': 2, 'sed': 1, 'nonumy': 1, 'eirmod': 1, 
+    # 'tempor': 1, 'et': 4, 'labore': 1}
+    
+    
+# In step-5, you have to implement the freqOf(word) method that takes a word argument:
+#  1. Create a method and pass the word that needs to be found.
+#  2. Get the freqAll method to look for count and check if that word is in the list.
+#  3. Return the count. If the word is not found, the count returned is 0.
+
+class TextAnalyzer(object):
+    
+    def __init__ (self, text):
+        # remove punctuation
+        self.text = formattedText
+        formattedText = text.replace('.','').replace('!','').replace('?','').replace(',','')
+        formattedText = formattedText.lower()
+        self.fmtText = formattedText
+        print(self.text)
+        
+    def freqAll(self):
+        splitlist = self.fmtText.split()
+        Dirct={ }
+        for key in splitlist:
+            Dict[key] = splitlist.count[key]
+        return Dict
+        
+    def freqOf(self,word):
+        # get frequency map
+        freqDict = self.freqAll()
+        
+        if word in freqDict:
+            return freqDict[word]
+        else:
+            return 0
+analyzed = TextAnalyzer(TextAnalyzer.givenstring)
+print(analyzed.freqAll())
+print("Formatted Text:", analyzed.fmtText)
+print("string counts the frequency :", analyzed.freqAll())
+print(analyzed.freqOf("lorem"))
+
+    # Output:
+    # Formatted Text: lorem ipsum dolor diam amet consetetur lorem magna sed diam nonumy eirmod tempor diam et labore et diam magna et diam amet
+    # string counts the frequency : {'lorem': 2, 'ipsum': 1, 'dolor': 1, 'diam': 5, 'amet': 3,
+    #                               'consetetur': 1, 'magna': 2, 'sed': 1, 'nonumy': 1, 'eirmod': 1,
+    #                               'tempor': 1, 'et': 4, 'labore': 1}
+    # 2
