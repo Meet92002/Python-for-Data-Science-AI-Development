@@ -30,6 +30,8 @@ async def main():
     xlsx_path = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/n9LOuKI9SlUa1b5zkaCMeg/Product-sales.xlsx'
     await download(xlsx_path, "Product-sales.xlsx")
     df_xlsx = pd.read_excel("Product-sales.xlsx")
+    # Writes DataFrame to a CSV file.
+    df_xlsx.to_csv("Product-sales.csv", index=False)
     return df, df_xlsx
 
 df, df_xlsx = __import__('asyncio').run(main())
@@ -57,5 +59,3 @@ x
 
 y = df[['Product','Category', 'Quantity']]
 y
-
-

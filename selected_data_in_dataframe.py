@@ -65,3 +65,58 @@ df.loc[0:2,'ID':'Department']
 
 #let us do the slicing using loc() function on new dataframe df2 where index column is Name having labels: Rose, John and Jane
 df2.loc['Rose':'Jane', 'ID':'Department']
+
+# describe()
+
+# Generates a statistics summary of numeric columns in the DataFrame.
+df.describe()
+
+# drop()
+
+# Removes specified rows or columns from the DataFrame. axis=1 indicates columns. axis=0 indicates rows.
+df.drop(["column1", "column2"], axis=1, inplace=True)
+df.drop(index=[0, 1], axis=0, inplace=True)
+
+# dropna()
+
+# Removes rows with missing NaN values from the DataFrame. axis=0 indicates rows.
+df.dropna(axis=0, inplace=True)
+
+# duplicated()
+
+# Identifies duplicate or repetitive values or records within a dataset.
+duplicate_rows = df[df.duplicated()]
+
+# Filter Rows
+
+# Creates a new DataFrame with rows that meet specified conditions.
+filtered_df = df[(df["age"] > 30) & (df["salary"] < 50000)]
+
+# groupby()
+
+# Splits a DataFrame into groups based on specified criteria, enabling subsequent aggregation,
+#  transformation, or analysis within each group.
+# grouped = dataframe_name.groupby(by, axis=0, level=None, as_index=True,
+# sort=True, group_keys=True, squeeze=False, observed=False, dropna=True)
+grouped = df.groupby(["category", "region"]).agg({"sales": "sum"})
+
+# info()
+
+# Provides information about the DataFrame, including data types and memory usage.
+df.info()
+
+# merge()
+
+# Merges two DataFrames based on multiple common columns.
+merged_df = pd.merge(df, df2, on=["product_id", "category_id"])
+
+# replace()
+
+# Replaces specific values in a column with new values.
+# dataframe_name["column_name"].replace(old_value, new_value, inplace=True)
+df["status"].replace("In Progress", "Active", inplace=True)
+
+# tail()
+
+# Displays the last n rows of the DataFrame.
+df.tail(5)
