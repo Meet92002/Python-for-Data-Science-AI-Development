@@ -236,7 +236,7 @@ def Plotvec2(a,b):
 
 a = np.array([-1, 1])
 b = np.array([1, 1])
-plotvec2(a,b)
+Plotvec2(a,b)
 print("The dot product is", np.dot(a,b))
 
 
