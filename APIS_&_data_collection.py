@@ -198,7 +198,7 @@ def download(url, filename):
 
 download(filename, "Golden_State.pkl")# This downloads the file.
 
-games = pd.read_pickle(file_name)
+games = pd.read_pickle(filename)
 
 
 # A .pkl file stores a Python object.
